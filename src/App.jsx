@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import Nav from './components/nav/Nav'
 
 export default function App() {
     return (
         <div>
-            <h1>APP</h1>
+            <Nav />
             <Outlet />
         </div>
     );

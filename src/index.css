@@ -48,6 +48,12 @@ html {
     margin: 0 auto; /* Position in the middle */
 }
 
+a {
+    transition: var(--transition);
+    padding: 0.5rem;
+    color: var(--color-light);
+}
+
 /* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */
 @media screen and (max-width: 1024px) {
     body {

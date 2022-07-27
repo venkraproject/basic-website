@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Catalogue from "./pages/Catalogue";
 import Contact from "./pages/Contact";
+import Error from "./pages/Error";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,6 +17,7 @@ root.render(
                 <Route path="about" element={<About />} />
                 <Route path="catalogue" element={<Catalogue />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="*" element={<Error />} />
             </Route>
         </Routes>
     </BrowserRouter>

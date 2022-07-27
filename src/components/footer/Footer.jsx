@@ -12,7 +12,7 @@ const Footer = () => {
         <footer id="footer">
 
             <Link  className="footer__logo" to="/">
-              <img src={LOGO} alt="" />
+                <img src={LOGO} alt="" />
             </Link>
 
             <ul className="permalinks">

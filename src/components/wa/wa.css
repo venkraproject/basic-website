@@ -1,0 +1,28 @@
+.WA__section {
+    z-index: 1;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+.whatsapp-icon {
+    background: #59CE72;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    padding: 0.7rem;
+    width: max-content;
+    border-radius: 50%;
+}
+.whatsapp-icon:hover {
+    color: white;
+    font-size: 3rem;
+    display: flex;
+    padding: 0.9rem;
+}
+
+@media screen and (max-width: 670px) {
+    .WA__section {
+        display: none;
+    }
+}

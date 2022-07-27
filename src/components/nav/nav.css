@@ -20,6 +20,13 @@ a > img {
     font-size: 1.5rem;
 }
 
+.mobile-nav > .right > .section-link {
+    color: var(--color-light);
+}
+.mobile-nav > .right > .section-link:hover {
+    color: var(--color-light);
+}
+
 .mobile-nav > .logo-link {
     background: transparent;
     display: flex;
@@ -61,6 +68,7 @@ a > img {
 }
 
 .desktop-nav > .right > .section-link:hover {
+    color: var(--color-light);
     padding: 1rem 3rem;
     background: var(--color-highlight);
 }

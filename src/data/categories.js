@@ -11,8 +11,8 @@ const categories = [
         id: "gorras",
         name: "Gorras",
         descripcion: "Gorras con diseño exclusivo, con hebilla metálica",
-        imagen_principal: "1seJ8EIY0l0eU2py_JZIDDChMkihDUopp",
-        image: "https://drive.google.com/uc?export=view&id=1seJ8EIY0l0eU2py_JZIDDChMkihDUopp",
+        imagen_principal: "1m5g4R80taC7CImUhalS681L8b3L1I_Qa",
+        image: "https://drive.google.com/uc?export=view&id=1m5g4R80taC7CImUhalS681L8b3L1I_Qa",
     },
     {
         id: "busos",

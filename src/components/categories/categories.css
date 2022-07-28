@@ -7,8 +7,8 @@
 .catalogue__product {
     display: block;
     background-color: var(--color-dark-alt);
-    border-radius: 0.5rem;
-    padding: 0.5rem;
+    border: 1px solid transparent;
+    padding: 0rem;
     position: relative;
     text-align: center;
 }
@@ -16,6 +16,7 @@
     color: var(--color-light);
     transition: var(--transition);
     background-color: var(--color-dark);
+    border-color: var(--color-dark-alt);
 }
 
 .catalogue__product > a {
@@ -36,8 +37,6 @@
 /* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
 @media screen and (max-width: 670px) {
     .catalogue__products {
-        padding-left: 4rem;
-        padding-right: 4rem;
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }

@@ -5,14 +5,14 @@ const categories = [
         descripcion:
             "Camisetas de algodón pima. Con exclusivos diseños minimalistas y diseños estampados",
         imagen_principal: "1LJgKICCEgmAYLvMhyBCrMG2TnbiqWtDe",
-        image: "https://drive.google.com/uc?export=view&id=1LJgKICCEgmAYLvMhyBCrMG2TnbiqWtDe",
+        image: "https://i.postimg.cc/C1Pdz95Z/camisetas.jpg",
     },
     {
         id: "gorras",
         name: "Gorras",
         descripcion: "Gorras con diseño exclusivo, con hebilla metálica",
         imagen_principal: "1m5g4R80taC7CImUhalS681L8b3L1I_Qa",
-        image: "https://drive.google.com/uc?export=view&id=1m5g4R80taC7CImUhalS681L8b3L1I_Qa",
+        image: "https://i.postimg.cc/zXWtFNN1/gorras.jpg",
     },
     {
         id: "busos",

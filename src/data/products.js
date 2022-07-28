@@ -8,7 +8,7 @@ const products = [
         price: 65000,
         description:
             "Camiseta básica de algodón pima, diseño exclusivo, cuello redondo y manga corta con logo bordado, unidades limitadas.",
-        image: "https://drive.google.com/uc?export=view&id=105h2MtwNk_tcHHnmoVTdEgjGhnRCl9Ff",
+        image: "https://i.postimg.cc/dV8jXLM6/c-t-shirt-P.jpg",
         xl: 5,
         l: 5,
         m: 5,
@@ -24,7 +24,7 @@ const products = [
         price: 70000,
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte trasera y logotipo bordado en la parte delantera, unidades limitadas.",
-        image: "https://drive.google.com/uc?export=view&id=1dzcgwqqIDE5c7p1_7cj352-WjQzAsIXM",
+        image: "https://i.postimg.cc/TPbpdHqJ/c-generation-P.jpg",
         xl: 10,
         l: 20,
         m: 20,
@@ -40,7 +40,7 @@ const products = [
         price: 70000,
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
-        image: "https://drive.google.com/uc?export=view&id=1LDaeglqfVB9wg_j-Lm6ZWqO6JEZ5-PbL",
+        image: "https://i.postimg.cc/vT6D2qqK/c-old-School-P.jpg",
         xl: 10,
         l: 20,
         m: 20,
@@ -64,7 +64,7 @@ const products = [
         tallas: "",
     },
     {
-        id: "c_splash_x",
+        id: "c_splash-x",
         name: "Splash X",
         category: "camisetas",
         foto_principal: "1uNiSVYL_56fEXT-jqRrmX8tsjLhbMc0P",
@@ -72,7 +72,7 @@ const products = [
         price: 70000,
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
-        image: "https://drive.google.com/uc?export=view&id=1uNiSVYL_56fEXT-jqRrmX8tsjLhbMc0P",
+        image: "https://i.postimg.cc/mkvqj2k0/c-splash-x-P.jpg",
         xl: 10,
         l: 20,
         m: 20,

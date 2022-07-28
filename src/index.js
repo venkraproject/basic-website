@@ -6,6 +6,7 @@ import About from "./pages/About";
 import Home from "./pages/Home";
 import Products from "./pages/products/Products";
 import Catalogue from "./pages/Catalogue";
+import SharedCatalogue from "./pages/sharedCatalogue/SharedCatalogue";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 import SingleProduct from "./pages/singleProduct/SingleProduct";
@@ -19,9 +20,11 @@ root.render(
                 <Route path="/" element={<App />}>
                     <Route path="" element={<Home />} />
                     <Route path="about" element={<About />} />
-                    <Route path="catalogue" element={<Catalogue />} />
-                    <Route path="products" element={<Products />} />
-                    <Route path="products/:productId" element={<SingleProduct />}/>
+                    <Route path="catalogue" element={<SharedCatalogue />}>
+                        <Route index element={<Catalogue />} />
+                        <Route path="products" element={<Products />} />
+                        <Route path="products/:productId" element={<SingleProduct />}/>
+                    </Route>
                     <Route path="contact" element={<Contact />} />
                     <Route path="*" element={<Error />} />
                 </Route>

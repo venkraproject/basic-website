@@ -1,0 +1,17 @@
+.shared-catalogue__container > a {
+    padding: 0rem;
+}
+
+.shared-catalogue__container > .catalogue__title {
+    text-align: center;
+}
+
+.shared-catalogue__links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+}
+
+.shared-catalogue__links > a {
+    padding: 0;
+}

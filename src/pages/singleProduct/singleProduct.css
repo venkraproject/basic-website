@@ -20,8 +20,24 @@
 }
 
 .select__container {
+    text-align: left;
     width: 100%;
     color: black;
+}
+
+.selector__size-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.selector__size-option {
+    width: 50px;
+    height: 70px;
+    text-align: center;
+    border-radius: 0.5rem;
+    background: var(--color-highlight);
+    padding: 0.5rem;
 }
 
 .price-buy {
@@ -32,4 +48,12 @@
 .product__buy-link {
     display: block;
     background: var(--color-highlight);
+}
+
+.productSection {
+    padding-top: 2rem;
+}
+
+.productSection__title {
+    margin-bottom: 0.5rem;
 }

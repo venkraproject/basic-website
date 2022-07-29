@@ -33,6 +33,7 @@ const SingleProduct = () => {
                 <p>{product.description}</p>
                 <div className="productSection">
                     <h5 className="productSection__title">Tamaños</h5>
+                    <h6 className="productSection__subtitle">Cantidad de unidades disponibles</h6>
                     <div className="select__container">
                         <div className="selector__size-options">
                             <div className="selector__size-option">

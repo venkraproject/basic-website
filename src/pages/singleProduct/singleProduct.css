@@ -55,5 +55,8 @@
 }
 
 .productSection__title {
+}
+.productSection__subtitle {
+    font-weight: 200;
     margin-bottom: 0.5rem;
 }

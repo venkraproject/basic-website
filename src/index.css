@@ -65,6 +65,10 @@ a:hover {
     color: var(--color-dark);
 }
 
+.header__container {
+    height: 100vh;
+}
+
 /* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */
 @media screen and (max-width: 1024px) {
     body {

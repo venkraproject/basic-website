@@ -26,10 +26,10 @@ const SingleProduct = () => {
             <div className="product__image">
                 <img src={product.image} alt={product.name} />
             </div>
-            <div className="product__title">
-                <h2>{product.name}</h2>
-            </div>
             <div className="container product-props__container">
+                <div className="product__title">
+                    <h2>{product.name}</h2>
+                </div>
                 <p>{product.description}</p>
                 <div className="productSection">
                     <h5 className="productSection__title">Tamaños</h5>

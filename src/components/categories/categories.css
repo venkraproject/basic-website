@@ -21,7 +21,6 @@
 
 .catalogue__product > a {
     background-color: var(--color-dark-alt);
-
 }
 
 .catalogue__product-image {
@@ -31,7 +30,13 @@
 }
 
 .catalogue__product-image > img {
+    transition: var(--transition);
     width: 100%;
+}
+
+.catalogue__product-image > img:hover {
+    width: 120%;
+    transform: translate(-10%, -10%);
 }
 
 /* ======== MEDIA QUERIES (SMALL DEVICES) ============ */

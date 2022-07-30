@@ -22,27 +22,19 @@
 .header-title>img {
     margin-top: 4rem;
     max-width: 100%;
-    max-height: 100%;
+    max-height: auto;
 }
 
 /* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
 @media screen and (max-width: 670px) {
     .header-scroll_down {
-        bottom: 7rem;
+        bottom: 6rem;
     }
     .header-title > img {
         margin-top: 13rem;
         
     }
 }
-/* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */
-@media screen and (max-width: 1200px) {
-    .header-scroll_down {
-        bottom: 7rem;
-    }
-    .header-title > img {
-        margin-top: 23rem;
-        
-    }
-}
+
+
 

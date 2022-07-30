@@ -1,7 +1,7 @@
 import React from "react";
 import "./header.css";
 import {BsChevronDown} from "react-icons/bs"
-import img from "../../assets/logo-blanco.png"
+import img from "../../assets/full-logo.png"
 
 const Header = () => {
     let img_url = "https://i.postimg.cc/wjN7B58s/car-1.jpg";

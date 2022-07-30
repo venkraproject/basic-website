@@ -30,5 +30,19 @@
     .header-scroll_down {
         bottom: 7rem;
     }
+    .header-title > img {
+        margin-top: 13rem;
+        
+    }
+}
+/* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */
+@media screen and (max-width: 1200px) {
+    .header-scroll_down {
+        bottom: 7rem;
+    }
+    .header-title > img {
+        margin-top: 23rem;
+        
+    }
 }
 

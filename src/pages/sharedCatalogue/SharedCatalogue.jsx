@@ -7,7 +7,7 @@ const Catalogue = () => {
     const category = new URLSearchParams( useLocation().search ).get('category');
     let camisetas = category==="camisetas" ? "shared-catalogue__selected-category" : "shared-catalogue__non-selected-category";
     let gorras = category==="gorras" ? "shared-catalogue__selected-category" : "shared-catalogue__non-selected-category";
-    let busos = category=="busos" ? "shared-catalogue__selected-category" : "shared-catalogue__non-selected-category";
+    let busos = category==="busos" ? "shared-catalogue__selected-category" : "shared-catalogue__non-selected-category";
 
     return (
         <div className="shared-catalogue__container">

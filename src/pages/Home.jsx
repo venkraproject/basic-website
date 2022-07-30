@@ -1,15 +1,15 @@
 import React from "react";
 import Categories from '../components/categories/Categories'
+import Contact from '../components/contact/Contact'
+import Header from '../components/header/Header'
 
 const Home = () => {
     return (
         <div className="Home">
-            <div className="header__container">
-                <h1>HEADER</h1>
-            </div>
+            <Header />
             <h1>Catalogo</h1>
             <Categories />
-            <h1>CONTACT</h1>
+            <Contact />
         </div>
     );
 };

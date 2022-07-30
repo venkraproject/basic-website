@@ -1,0 +1,27 @@
+#header {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.header-background {
+    background: rgba(255, 255, 255, 0.332);
+    width: 100%;
+    height: 100vh;
+}
+
+.header-scroll_down {
+    color: black;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    bottom: 7rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.header-title {
+    padding-top: 10rem;
+    font-weight: 900;
+    font-size: 3rem;
+    color: black;
+}

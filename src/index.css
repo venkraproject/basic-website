@@ -12,7 +12,7 @@
 
 :root {
     --color-dark: #2b2b2b;
-    --color-dark-alt: #747474;
+    --color-dark-alt: #4f4e4e;
     --color-light: #EFEBE6;
     --color-light-alt: #cac6c1;
     --color-highlight: hsl(40, 18%, 52%);
@@ -48,6 +48,13 @@ html {
     margin: 0 auto; /* Position in the middle */
 }
 
+h1 {
+    margin-top: 3rem;
+}
+h2 {
+    margin-top: 3rem;
+}
+
 a {
     transition: var(--transition);
     padding: 0.5rem;
@@ -56,6 +63,10 @@ a {
 
 a:hover {
     color: var(--color-dark);
+}
+
+.header__container {
+    height: 100vh;
 }
 
 /* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */

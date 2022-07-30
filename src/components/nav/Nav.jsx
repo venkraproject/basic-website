@@ -16,7 +16,7 @@ const Nav = () => {
                     </Link>
                 </div>
                 <div className="right">
-                    <Link className="section-link" to="/catalogue">
+                    <Link className="section-link" to="/catalogue?category=none">
                         Catálogo
                     </Link>
                     <Link className="section-link" to="/about">
@@ -28,7 +28,7 @@ const Nav = () => {
                 <Link className="logo-link" to="/">
                     <img src={LOGO} alt="venkra-logo" />
                 </Link>
-                <Link className="section-link" to="/catalogue">
+                <Link className="section-link" to="/catalogue?category=none">
                     <BiPhotoAlbum />
                 </Link>
                 <Link className="section-link" to="/about">

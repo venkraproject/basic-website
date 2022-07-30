@@ -1,10 +1,10 @@
-import React from "react";
+import Categories from '../components/categories/Categories'
 
 const Catalogue = () => {
     return (
-        <div className="Catalogue">
-            <h1>CATALOGUE</h1>
-        </div>
+        <>
+            <Categories />
+        </>
     );
 };
 

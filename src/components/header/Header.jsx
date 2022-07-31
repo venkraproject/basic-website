@@ -1,14 +1,25 @@
 import React from "react";
-import "./header.css";
 import {BsChevronDown} from "react-icons/bs"
+import Bowser from 'bowser'
+
+import "./header.css";
+
 import img from "../../assets/full-logo.png"
 import VID from "../../assets/main.mp4"
 
 const Header = () => {
-    let img_url = "https://i.postimg.cc/wjN7B58s/car-1.jpg";
+
+    const bowser = Bowser.getParser(window.navigator.userAgent);
+
+    let video_section = {
+        WebKit: <img className="header_banner-container" src={VID} alt="venkra banner"/>,
+        Gecko: <video className="header_banner-container" src={VID} autoPlay loop muted/>,
+        Blink: <video className="header_banner-container" src={VID} autoPlay loop muted/>
+    }
+
     return (
         <section id="header">
-            <video src={VID} autoPlay loop muted/>
+            {video_section[bowser.getEngineName()]}
             <div className="header-content">
                 <div className="container-header_logo">
                     <img src={img} alt=""/> 

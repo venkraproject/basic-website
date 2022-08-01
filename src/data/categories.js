@@ -19,7 +19,7 @@ const categories = [
         name: "Busos y Hoodies",
         descripcion: "Busos y Hoodies de algodón perchado.",
         imagen_principal: "1Au-7G5YbjjqZi6REBvGE17WMKb3BVI5k",
-        image: "https://drive.google.com/uc?export=view&id=1Au-7G5YbjjqZi6REBvGE17WMKb3BVI5k",
+        image: "https://i.postimg.cc/WzNZyQRG/comming-soon.jpg",
     },
 ];
 

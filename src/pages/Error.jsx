@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 const Error = (props) => {
   const { message } = props
   return (

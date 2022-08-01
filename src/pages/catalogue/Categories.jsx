@@ -1,9 +1,8 @@
-// import './categories.css'
 import Card from '../../components/card/Card'
 import pCategories from "../../data/categories";
 import './categories.css'
 
-const Catalogue = () => {
+const Categories = () => {
     return (
         <>
             <section className="container">
@@ -28,4 +27,4 @@ const Catalogue = () => {
     );
 };
 
-export default Catalogue;
+export default Categories;

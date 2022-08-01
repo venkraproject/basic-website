@@ -1,8 +1,8 @@
-import { Link, Outlet, useLocation, useParams } from "react-router-dom";
+import { Link, Outlet, useParams } from "react-router-dom";
 import "./catalogueLayout.css";
 import LOGO from "../../assets/logo-negro.png";
 
-const Catalogue = () => {
+const CatalogueLayout = () => {
     const { categoryId } = useParams()
     let camisetas =
         categoryId === "camisetas"
@@ -53,4 +53,4 @@ const Catalogue = () => {
     );
 };
 
-export default Catalogue;
+export default CatalogueLayout;

@@ -5,7 +5,7 @@ import Wa from './components/wa/Wa'
 
 export default function App() {
     return (
-        <div>
+        <div key='App'>
             <Nav />
             <Wa />
             <Outlet />

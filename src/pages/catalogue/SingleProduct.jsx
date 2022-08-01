@@ -22,7 +22,7 @@ const SingleProduct = () => {
         ").";
 
     return (
-        <section className="section__product">
+        <section className="section__product" key="singleProduct">
             <div className="product__image">
                 <img src={product.image} alt={product.name} />
             </div>

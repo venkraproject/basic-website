@@ -3,12 +3,24 @@
     grid-template-columns: 1fr 1fr;
 }
 
-.product__title {
-    text-align: center;
+.color-chooser_container {
+    display: flex;
+    justify-content: center;
 }
 
-.product__image > img {
-    width: 100%;
+.color-chooser_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+}
+
+.color-option {
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.product__title {
+    text-align: center;
 }
 
 .product-props__container {

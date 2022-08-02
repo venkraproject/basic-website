@@ -1,4 +1,4 @@
-.catalogue__products {
+.card_grid {
     overflow: hidden;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -7,7 +7,7 @@
 
 /* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
 @media screen and (max-width: 670px) {
-    .catalogue__products {
+    .card_grid {
         grid-template-columns: 1fr 1fr;
     }
 }

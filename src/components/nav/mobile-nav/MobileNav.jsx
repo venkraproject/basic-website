@@ -1,6 +1,6 @@
 import React from "react";
 import "./mobile-nav.css";
-import LOGO from "../../assets/logo-blanco.png";
+import LOGO from "../../../assets/logo-blanco.png";
 import { BiPhotoAlbum } from "react-icons/bi";
 import { IoIosContact } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";

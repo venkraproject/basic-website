@@ -7,8 +7,8 @@ export default function App() {
     return (
         <div key='App'>
             <Nav />
-            <Wa />
             <Outlet />
+            <Wa />
             <Footer />
         </div>
     );

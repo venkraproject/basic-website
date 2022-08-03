@@ -48,12 +48,6 @@ const productImages = [
         download_link: "https://i.postimg.cc/mrrDQQzG/c-t-shirt-blanco-4.jpg",
     },
     {
-        file_id: "1SngEX0KU6o-OHkECM579ZNBqNs3-o-tZ",
-        referencia: "c_t-shirt",
-        color: "black",
-        download_link: "https://i.postimg.cc/d1kVfwjH/c-t-shirt-negro-1.jpg",
-    },
-    {
         file_id: "1lbOuZkns7rWPjJtLnnXJfrU3HoNWuN_p",
         referencia: "c_t-shirt",
         color: "black",

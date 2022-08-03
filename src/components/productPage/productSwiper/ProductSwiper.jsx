@@ -2,7 +2,7 @@ import React from "react";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Lazy, Pagination, Navigation } from "swiper";
-import './singleProductSwiper.css'
+import './productSwiper.css'
 
 // Import Swiper styles
 import "swiper/css";

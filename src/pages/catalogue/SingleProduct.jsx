@@ -1,9 +1,15 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+import "./singleProduct.css";
+
+// Components
+import SingleProductSwiper from "../../components/productPage/productSwiper/ProductSwiper";
+import ColorChooser from "../../components/productPage/colorPicker/ColorPicker";
+import SizePicker from "../../components/productPage/sizePicker/SizePicker";
+
+// Data
 import products from "../../data/products";
 import productImages from "../../data/productImages";
-import "./singleProduct.css";
-import SingleProductSwiper from "../../components/singleProductSwiper/SingleProductSwiper";
-import { useState } from "react";
 
 const SingleProduct = () => {
     const { productId } = useParams();
@@ -14,9 +20,16 @@ const SingleProduct = () => {
         (image) => image.referencia === product.id
     );
 
+    // Get product colors
     const allColors = [...new Set(allImages.map((image) => image.color))];
 
+    // Set state for color and size
     const [currentColor, setCurrentColor] = useState(allColors[0]);
+    const [currentSize, setCurrentSize] = useState({
+        id: "m",
+        name: "M",
+        amount: product.m,
+    });
 
     // Filter images per color
     const shownImages = allImages.filter(
@@ -24,89 +37,59 @@ const SingleProduct = () => {
             image.referencia === product.id && image.color === currentColor
     );
 
-    // const sizes = [
-    //     { label: "XL - Disponibles: " + product.xl, value: "xl" },
-    //     { label: "L - Disponibles: " + product.l, value: "l" },
-    //     { label: "M - Disponibles: " + product.m, value: "m" },
-    //     { label: "S - Disponibles: " + product.s, value: "s" },
-    // ];
+    const sizes = [
+        { id: "s", name: "S", amount: product.s },
+        { id: "m", name: "M", amount: product.m },
+        { id: "l", name: "L", amount: product.l },
+        { id: "xl", name: "XL", amount: product.xl },
+    ];
 
     const buyLink =
         "https://wa.me/+573044644001?text=Hola%2C%20estoy%20interesado%20en%20" +
         product.name +
         " (" +
         product.id +
-        ").";
+        ")" +
+        " en talla " +
+        currentSize.name +
+        " y color " +
+        currentColor;
 
     return (
         <section className="section__product" key="singleProduct">
-            <SingleProductSwiper shownImages={shownImages} />
-            <div className="container product-props__container">
-                <div className="color-chooser_container">
-                    <div className="color-chooser_grid">
-                        {allColors.map((color) => {
-                            return (
-                                <button
-                                    style={{ background: color }}
-                                    onClick={() => {
-                                        setCurrentColor(color);
-                                    }}
-                                    className="color-option"
-                                    key={color}
-                                />
-                            );
-                        })}
+            <div className="single_product-left">
+                <SingleProductSwiper shownImages={shownImages} />
+            </div>
+            <div className="single_product-right">
+                <div>
+                    <div className="single_product-title">
+                        <div>{product.name}</div>
                     </div>
+
+                    <p>{product.description}</p>
+
+                    <ColorChooser
+                        allColors={allColors}
+                        setCurrentColor={setCurrentColor}
+                        currentColor={currentColor}
+                    />
+
+                    <SizePicker
+                        sizes={sizes}
+                        setCurrentSize={setCurrentSize}
+                        currentSize={currentSize}
+                    />
                 </div>
-                <div className="product__title">
-                    <h2>{product.name}</h2>
-                </div>
-                <p>{product.description}</p>
-                <div className="productSection">
-                    <h5 className="productSection__title">Tamaños</h5>
-                    <h6 className="productSection__subtitle">
-                        Cantidad de unidades disponibles
-                    </h6>
-                    <div className="select__container">
-                        <div className="selector__size-options">
-                            <div className="selector__size-option">
-                                <small>XL</small>
-                                <br />
-                                {product.xl}
-                            </div>
-                            <div className="selector__size-option">
-                                <small>L</small>
-                                <br />
-                                {product.l}
-                            </div>
-                            <div className="selector__size-option">
-                                <small>M</small>
-                                <br />
-                                {product.m}
-                            </div>
-                            <div className="selector__size-option">
-                                <small>S</small>
-                                <br />
-                                {product.s}
-                            </div>
-                        </div>
-                        {/* <Select isSearchable={false} options={sizes} /> */}
-                    </div>
-                </div>
-                <div className="productSection">
-                    <h5>Colores:</h5>
-                    <p>{product.colores_temp}</p>
-                </div>
-                <div className="productSection">
-                    <div className="container price-buy">
-                        <div>
+                <div>
+                    <div className="single_product-buy_section">
+                        <div className="single_product-buy_price">
                             <h3>${product.price.toLocaleString()}</h3>
                         </div>
                         <a
                             href={buyLink}
                             target="_blank"
                             rel="noreferrer"
-                            className="product__buy-link"
+                            className="single_product-buy_button"
                         >
                             Compra ahora
                         </a>

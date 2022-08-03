@@ -1,65 +1,36 @@
 .section__product {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
 }
 
-.color-chooser_container {
+.single_product-left {
     display: flex;
-    justify-content: center;
 }
-
-.color-chooser_grid {
+.single_product-right {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 1rem;
+    grid-template-columns: 65% 35%;
+    padding: 1.5rem;
 }
 
-.color-option {
-    border-radius: 50%;
-    padding: 1rem;
+.single_product-title {
+    align-self: flex-start;
+    font-size: 1.5rem;
 }
 
-.product__title {
-    text-align: center;
-}
-
-.product-props__container {
-    text-align: center;
-}
-
-.select__container {
-    text-align: left;
-    width: 100%;
-    color: black;
-}
-
-.selector__size-options {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.selector__size-option {
-    width: 50px;
-    height: 70px;
-    text-align: center;
-    border-radius: 0.5rem;
-    background: var(--color-highlight);
-    padding: 0.5rem;
-}
-
-.price-buy {
+.single_product-buy_section {
     border: 1px solid var(--color-highlight);
     padding: 1rem;
+    margin: 1rem;
 }
 
-.product__buy-link {
+.single_product-buy_button {
     display: block;
+    text-align: center;
     background: var(--color-highlight);
 }
 
-.productSection {
-    padding-top: 2rem;
+.single_product-buy_price {
+    text-align: center;
 }
 
 .productSection__subtitle {
@@ -69,6 +40,13 @@
 
 /* ======== MEDIA QUERIES (MEDIUM DEVICES) ============ */
 @media screen and (max-width: 1024px) {
+    .section__product {
+        grid-template-columns: 50% 50%;
+    }
+    .single_product-right {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 /* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
@@ -76,13 +54,9 @@
     .section__product {
         display: contents;
     }
-
-    .product__image {
-        left: 50%;
-        margin-left: -50vw;
-        margin-right: -50vw;
-        position: relative;
-        right: 50%;
-        width: 100vw;
+    .single_product-right {
+        display: flex;
+        flex-direction: column;
+        padding: 1.5rem;
     }
 }

@@ -33,7 +33,7 @@ const SingleProductSwiper = (props) => {
                 return (
                     <SwiperSlide className="swiper-slide" key={image.file_id}>
                         <img
-                            src={image.download_link}
+                            src={image.img_url}
                             alt={image.referencia + image.file_id}
                         />
                     </SwiperSlide>

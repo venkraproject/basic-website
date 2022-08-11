@@ -1,0 +1,35 @@
+.single_product-color_picker {
+    text-align: center;
+    height: max-content;
+    width: 100%;
+    padding: 1rem;
+}
+
+.single_product-color_picker p {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.color_chooser-container {
+    display: flex;
+    justify-content: center;
+}
+
+.color_chooser-grid {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.color_option {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    border: 5px solid var(--color-dark);
+}
+.color_option.active {
+    border: 5px solid var(--color-dark-alt);
+}
+.color_option:hover {
+    border: 5px solid var(--color-dark-alt);
+}

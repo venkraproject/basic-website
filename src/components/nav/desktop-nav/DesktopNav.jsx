@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./desktop-nav.css";
-import "./mobile-nav.css";
-import LOGO from "../../assets/logo-blanco.png";
+import LOGO from "../../../assets/logo-blanco.png";
 import { Link } from "react-router-dom";
 
 const DesktopNav = () => {

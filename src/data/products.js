@@ -6,6 +6,7 @@ const products = [
         foto_principal: "105h2MtwNk_tcHHnmoVTdEgjGhnRCl9Ff",
         colores_temp: "Blanco - Negro - Gris. Pregúntanos por disponibilidad.",
         price: 65000,
+        short_description: "$65.000",
         description:
             "Camiseta básica de algodón pima, diseño exclusivo, cuello redondo y manga corta con logo bordado, unidades limitadas.",
         image: "https://i.postimg.cc/dV8jXLM6/c-t-shirt-P.jpg",
@@ -22,6 +23,7 @@ const products = [
         foto_principal: "1BLSVeWkJ_yM134-g6XMefzkW_5-j5gu6",
         colores_temp: "Blanco - Negro - Gris. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/7YY17fHh/c-vnk-P.jpg",
@@ -38,6 +40,7 @@ const products = [
         foto_principal: "1dzcgwqqIDE5c7p1_7cj352-WjQzAsIXM",
         colores_temp: "Blanco - Negro - Gris. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte trasera y logotipo bordado en la parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/TPbpdHqJ/c-generation-P.jpg",
@@ -54,6 +57,7 @@ const products = [
         foto_principal: "1Xr8rTHxgHrKpTp3oV2lNwRY7a5FpNWdy",
         colores_temp: "Navy - Negro. Pregúntanos por disponibilidad.",
         price: 80000,
+        short_description: "$80.000",
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/dtH29w3B/c-special-P.jpg",
@@ -70,6 +74,7 @@ const products = [
         foto_principal: "1LDaeglqfVB9wg_j-Lm6ZWqO6JEZ5-PbL",
         colores_temp: "Blanco - Negro - Gris. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/vT6D2qqK/c-old-School-P.jpg",
@@ -86,6 +91,7 @@ const products = [
         foto_principal: "1uNiSVYL_56fEXT-jqRrmX8tsjLhbMc0P",
         colores_temp: "Blanco - Negro - Gris. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Camiseta básica de algodón pima, cuello redondo y manga corta , cuenta con un genial estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/mkvqj2k0/c-splash-x-P.jpg",
@@ -102,6 +108,7 @@ const products = [
         foto_principal: "1sBE2ANfymci_OfMCnFotMvusLBQSsC4a",
         colores_temp: "Gris. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Gorra con logo bordado, diseño exclusivo y cuenta con hebilla metálica marcada con láser, unidades limitadas.",
         image: "https://i.postimg.cc/K89161fC/g-iso-P.jpg",
@@ -118,6 +125,7 @@ const products = [
         foto_principal: "1UK8YlryfBviAVHl2d5aP-b9XjSAzPRgN",
         colores_temp: "Negro. Pregúntanos por disponibilidad.",
         price: 70000,
+        short_description: "$70.000",
         description:
             "Gorra con bordado en alto relieve, diseño exclusivo y cuenta con hebilla metálica marcada con láser, unidades limitadas.",
         image: "https://i.postimg.cc/QCZXvTzg/g-vnk-P.jpg",
@@ -134,6 +142,7 @@ const products = [
         foto_principal: "18MSYJczdrNtpg3fuoxWYXVoWXAZbFlka",
         colores_temp: "Negro - Blanco. Pregúntanos por disponibilidad.",
         price: 60000,
+        short_description: "$60.000",
         description:
             "Camiseta tipo esqueleto de algodón pima con estampado estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/jdfYf2LP/c-openmind-P.jpg",
@@ -150,6 +159,7 @@ const products = [
         foto_principal: "10ZB_eaC2g9m3bXIjYPm_6G5JchBY3BQR",
         colores_temp: "Negro - Blanco. Pregúntanos por disponibilidad.",
         price: 60000,
+        short_description: "$60.000",
         description:
             "Camiseta tipo esqueleto de algodón pima con estampado estampado exclusivo en su parte delantera, unidades limitadas.",
         image: "https://i.postimg.cc/0NZN12SM/c-victory-P.jpg",

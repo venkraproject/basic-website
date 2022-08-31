@@ -10,7 +10,7 @@ const CardGrid = (props) => {
                 return (
                     <div key={"item-key-" + item.id}>
                         <Card
-                            card_image_url={item.image}
+                            card_image_url={item.img_url}
                             card_title={item.name}
                             card_id={item.id}
                             card_destination={`/catalogue/${destinationParent}${item.id}`}

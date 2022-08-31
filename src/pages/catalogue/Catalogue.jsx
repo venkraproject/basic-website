@@ -13,7 +13,7 @@ const CatalogueLayout = () => {
             ? "catalogue__selected-category"
             : "catalogue__non-selected-category";
     let busos =
-        categoryId === "busos"
+        categoryId === "busos_y_hoodies"
             ? "catalogue__selected-category"
             : "catalogue__non-selected-category";
 
@@ -32,9 +32,9 @@ const CatalogueLayout = () => {
                             Gorras
                     </div>
                         </Link>
-                        <Link to="/catalogue/busos">
+                        <Link to="/catalogue/busos_y_hoodies">
                     <div className={busos}>
-                            Busos
+                            Busos y Hoodies
                     </div>
                         </Link>
                 </div>

@@ -2,7 +2,7 @@
   "name": "venkra--basic-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://venkra.juanrcifuentes.com",
+  "homepage": "https://juanrcifuentes.github.io/venkra--basic-website/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build && echo https://venkra.juanrcifuentes.com > ./build/CNAME",
+    "predeploy": "npm run build && echo https://juanrcifuentes.github.io/venkra--basic-website/ > ./build/CNAME",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",

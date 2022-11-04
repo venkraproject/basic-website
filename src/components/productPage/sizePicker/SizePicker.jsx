@@ -1,4 +1,3 @@
-import React from "react";
 import "./sizePicker.css";
 
 const SizePicker = (props) => {

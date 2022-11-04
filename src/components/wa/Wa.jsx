@@ -1,4 +1,3 @@
-import React from 'react'
 import './wa.css'
 import {BsWhatsapp} from 'react-icons/bs'
 

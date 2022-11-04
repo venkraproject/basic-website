@@ -1,4 +1,3 @@
-import React from "react";
 import Catalogue from '../catalogue/Categories'
 import Contact from '../../components/contact/Contact'
 import {BsChevronDown} from "react-icons/bs"

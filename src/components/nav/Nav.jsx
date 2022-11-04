@@ -1,4 +1,3 @@
-import React from "react";
 import DesktopNav from './desktop-nav/DesktopNav'
 import MobileNav from './mobile-nav/MobileNav'
 import './nav.css'

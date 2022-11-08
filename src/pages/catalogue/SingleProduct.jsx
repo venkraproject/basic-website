@@ -26,7 +26,7 @@ const SingleProduct = ({ allImages, products }) => {
         tallas:"{xl:5,xl:10,m:10,s:5}"
     })
     const [ allColors, setAllColors ] = useState([])
-    const [ currentColor, setCurrentColor ] = useState('');
+    const [ currentColor, setCurrentColor ] = useState();
     const [ currentSize, setCurrentSize ] = useState({
         id: "m",
         name: "M",
@@ -52,8 +52,10 @@ const SingleProduct = ({ allImages, products }) => {
         // Get product colors
         const colors = [...new Set(productImages.map((image) => image.color))];
         setAllColors(colors)
-        setCurrentColor(colors[0])
-
+        if(!currentColor){
+            setCurrentColor(colors[0])
+        }
+        
     }, [product, productId, products, allImages, currentColor])
     
     const sizes = [

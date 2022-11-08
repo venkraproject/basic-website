@@ -27,11 +27,7 @@ const SingleProduct = ({ allImages, products }) => {
     })
     const [ allColors, setAllColors ] = useState([])
     const [ currentColor, setCurrentColor ] = useState();
-    const [ currentSize, setCurrentSize ] = useState({
-        id: "m",
-        name: "M",
-        amount: product.m,
-    });
+    const [ currentSize, setCurrentSize ] = useState({});
     const [ shownImages, setShownImages ] = useState([])
 
     useEffect(() => {
@@ -76,6 +72,34 @@ const SingleProduct = ({ allImages, products }) => {
         " y color " +
         currentColor;
 
+    function buyButton(){
+        if(currentSize.name){
+            return(
+                <a
+                    href={buyLink}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="single_product-buy_button"
+                >
+                    Compra ahora
+                </a>
+            )
+        } else {
+            return(
+                <a 
+                    className="single_product-buy_button" 
+                    onClick={sizeAlert}
+                >
+                    Compra ahora
+                </a>
+            )
+        }
+    }
+
+    function sizeAlert(){
+        alert('Porfavor selecciona tu talla')
+    }
+
     return (
         <section className="section__product" key="singleProduct">
             <div className="single_product-left">
@@ -84,7 +108,7 @@ const SingleProduct = ({ allImages, products }) => {
             <div className="single_product-right">
                 <div>
                     <div className="single_product-title">
-                        <div>{product.name} - Talla: {currentSize.name}</div>
+                        <div>{product.name}{currentSize.name? " - Talla: " + currentSize.name:""}</div>
                     </div>
 
                     <p>{product.description}</p>
@@ -100,20 +124,16 @@ const SingleProduct = ({ allImages, products }) => {
                         setCurrentSize={setCurrentSize}
                         currentSize={currentSize}
                     />
+                    
                 </div>
                 <div>
                     <div className="single_product-buy_section">
                         <div className="single_product-buy_price">
                             <h3>{product.short_description}</h3>
                         </div>
-                        <a
-                            href={buyLink}
-                            target="_blank"
-                            rel="noreferrer"
-                            className="single_product-buy_button"
-                        >
-                            Compra ahora
-                        </a>
+
+                        {buyButton()}
+                        
                     </div>
                 </div>
             </div>

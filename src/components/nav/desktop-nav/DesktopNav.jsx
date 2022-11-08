@@ -27,7 +27,7 @@ const DesktopNav = () => {
                 <Link className="section-link" to="/catalogue">
                     Catálogo
                 </Link>
-                <Link className="section-link" to="/about">
+                <Link className="section-link" to="/contact">
                     Contáctanos
                 </Link>
             </div>

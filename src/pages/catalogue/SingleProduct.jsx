@@ -84,7 +84,7 @@ const SingleProduct = ({ allImages, products }) => {
             <div className="single_product-right">
                 <div>
                     <div className="single_product-title">
-                        <div>{product.name}</div>
+                        <div>{product.name} - Talla: {currentSize.name}</div>
                     </div>
 
                     <p>{product.description}</p>
@@ -104,7 +104,7 @@ const SingleProduct = ({ allImages, products }) => {
                 <div>
                     <div className="single_product-buy_section">
                         <div className="single_product-buy_price">
-                            <h3>${product.price.toLocaleString()}</h3>
+                            <h3>{product.short_description}</h3>
                         </div>
                         <a
                             href={buyLink}

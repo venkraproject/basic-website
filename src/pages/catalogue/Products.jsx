@@ -34,11 +34,11 @@ const Products = ({ allProducts, categories }) => {
         <div className="container" key="products">
             <CardGrid destinationParent={category.id+"/"} itemList={filteredProducts}/>
             <div className={category==='' ? '' : "hide"}>
-                Loading, please wait
+                <h2>Cargando, por favor espera...</h2>
             </div>
-            <div className={filteredProducts && !filteredProducts.length ? "" : "hide"}>
+            {/* <div className={filteredProducts && !filteredProducts.length ? "" : "hide"}>
                 <ComingSoon />
-            </div>
+            </div> */}
         </div>
     );
 };

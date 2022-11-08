@@ -35,3 +35,18 @@
     margin-top: 0.4rem;
     margin-bottom: 0.2rem;
 }
+
+/* UNNAVAILABLE */
+.size_unavailable {
+    width: 40px;
+    height: 55px;
+    color: var(--color-dark);
+    border-radius: 0.5rem;
+    border: 5px solid var(--color-dark);
+    background: var(--color-dark-alt);
+}
+
+.size_unavailable h5 {
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+}

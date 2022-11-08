@@ -5,6 +5,7 @@ import Wa from '../components/wa/Wa'
 import './app.css'
 
 export default function App() {
+
     return (
         <div key='App'>
             <Nav />

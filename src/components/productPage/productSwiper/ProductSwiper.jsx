@@ -9,10 +9,7 @@ import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const SingleProductSwiper = (props) => {
-
-    let { shownImages } = props
-
+const SingleProductSwiper = ({ shownImages }) => {
     return (
         <Swiper
             style={{

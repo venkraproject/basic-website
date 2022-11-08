@@ -1,10 +1,11 @@
 import CardGrid from "../../components/cardGrid/CardGrid";
-import all_categories from "../../data/categories";
 
-const Categories = () => {
+function Categories(props) {
+    const { categories } = props
+
     return (
         <section className="container">
-            <CardGrid itemList={all_categories} />
+            <CardGrid itemList={categories} />
         </section>
     );
 };

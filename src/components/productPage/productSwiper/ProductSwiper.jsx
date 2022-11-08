@@ -1,4 +1,3 @@
-import React from "react";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Lazy, Pagination, Navigation } from "swiper";
@@ -10,10 +9,7 @@ import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-const SingleProductSwiper = (props) => {
-
-    let { shownImages } = props
-
+const SingleProductSwiper = ({ shownImages }) => {
     return (
         <Swiper
             style={{

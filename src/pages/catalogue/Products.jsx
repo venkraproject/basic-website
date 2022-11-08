@@ -1,41 +1,44 @@
 import { useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 // Components
 import ComingSoon from '../ComingSoon'
 import Error from '../Error'
 import CardGrid from "../../components/cardGrid/CardGrid";
 
-// Data
-import all_products from "../../data/products";
-import categories from "../../data/categories";
+const Products = ({ allProducts, categories }) => {
 
-const Products = (props) => { 
-    // Get Category from url parameters
     const { categoryId } = useParams();
-    const category = categories.find((category) => category.id === categoryId);
 
+    const [ category, setCategory ] = useState('')
+    const [ filteredProducts, setFilteredProducts ] = useState([])
+
+    useEffect(() => {
+        let currentCategory = ''
+        if (categories.length) {
+            currentCategory = categories.find((tempCat) => tempCat.id === categoryId)
+            setCategory(currentCategory)
+        }
+        if (currentCategory && currentCategory.id) {
+            const filteredTemp = allProducts.filter(prod => prod.category===currentCategory.id)
+            setFilteredProducts(filteredTemp)
+        }
+    }, [ categoryId, allProducts, categories ])
+    
     // Check if category exists
     if(category===undefined) {
-        return (
-            <div key="error">
-                <Error message={`The category "${categoryId}" doesn't exist`}/>
-            </div>
-        )
+        return <Error message={`The category "${categoryId}" doesn't exist`}/>
     }
-
-    // Get category products
-    const shownProducts = all_products.filter((product) => 
-        product.category === category.id
-    )
-    const emptyCategory = !shownProducts.length ? "" : "hide";
-    
 
     return (
         <div className="container" key="products">
-            <CardGrid destinationParent={category.id+"/"} itemList={shownProducts}/>
-            <div className={emptyCategory}>
-                <ComingSoon />
+            <CardGrid destinationParent={category.id+"/"} itemList={filteredProducts}/>
+            <div className={category==='' ? '' : "hide"}>
+                <h2>Cargando, por favor espera...</h2>
             </div>
+            {/* <div className={filteredProducts && !filteredProducts.length ? "" : "hide"}>
+                <ComingSoon />
+            </div> */}
         </div>
     );
 };

@@ -1,4 +1,3 @@
-import React from "react";
 import "./mobile-nav.css";
 import LOGO from "../../../assets/logo-blanco.png";
 import { BiPhotoAlbum } from "react-icons/bi";

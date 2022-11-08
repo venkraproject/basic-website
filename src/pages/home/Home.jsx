@@ -1,4 +1,3 @@
-import React from "react";
 import Catalogue from '../catalogue/Categories'
 import Contact from '../../components/contact/Contact'
 import {BsChevronDown} from "react-icons/bs"
@@ -9,7 +8,7 @@ import "./home.css";
 import img from "../../assets/full-logo.png"
 import VID from "../../assets/main.mp4"
 
-const Home = () => {
+const Home = (props) => {
 
     const bowser = Bowser.getParser(window.navigator.userAgent);
 
@@ -35,7 +34,7 @@ const Home = () => {
             <div className="contact-center">
                 Catalogo
             </div>
-            <Catalogue />
+            <Catalogue categories={props.categories}/>
             <Contact />
         </div>
     );

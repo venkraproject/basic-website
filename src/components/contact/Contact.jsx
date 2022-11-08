@@ -1,4 +1,3 @@
-import React from 'react'
 import './contact.css'
 import {BsMessenger} from 'react-icons/bs'
 import {BsWhatsapp} from 'react-icons/bs'

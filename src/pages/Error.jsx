@@ -1,7 +1,7 @@
 const Error = (props) => {
   const { message } = props
   return (
-    <section className='section'>
+    <section  key='error' className='section'>
       <h2>404</h2>
       <p>Page not found</p>
       <p>{message}</p>

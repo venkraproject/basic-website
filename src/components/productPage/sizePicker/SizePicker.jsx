@@ -1,8 +1,9 @@
-import React from "react";
 import "./sizePicker.css";
 
-const SizePicker = (props) => {
-    const { sizes, setCurrentSize, currentSize } = props;
+const SizePicker = ({ sizes, setCurrentSize, currentSize }) => {
+    function notAvailable(){
+        alert('hola')
+    }
 
     return (
         <div className="single_product-size_picker">
@@ -13,12 +14,13 @@ const SizePicker = (props) => {
                     return (
                         <button
                             onClick={() => {
-                                setCurrentSize(sizeOption);
+                                if(sizeOption.amount > 0 ){
+                                    setCurrentSize(sizeOption)
+                                }
                             }}
                             className={
-                                sizeOption.id === currentSize.id
-                                ? "size_option active" 
-                                : "size_option"
+                                (sizeOption.amount>0 ? "size_option" : "size_unavailable").concat(
+                                sizeOption.id === currentSize.id ? " active" : "")
                             }
                             key={sizeOption.id + index}
                         >

@@ -23,7 +23,10 @@ jobs:
         run: bun install
 
       - name: Build
-        run: bun run build
+        run: |
+          echo "CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}"
+          echo "VITE_BASE: $VITE_BASE"
+          bun run build
         env:
           VITE_BASE: ${{ vars.CUSTOM_DOMAIN && '/' || format('/{0}/', github.event.repository.name) }}
 

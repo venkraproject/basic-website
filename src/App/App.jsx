@@ -32,7 +32,7 @@ export default function App() {
                     <Route path="/" element={<AppUI />}>
                         <Route index element={<Home categories={categories}/>} />
                         <Route path="about" element={<About />} />
-                        <Route path="catalogue" element={<Catalogue />}>
+                        <Route path="catalogue" element={<Catalogue categories={categories} />}>
                             <Route index element={<Categories categories={categories}/>} />
                             <Route path=":categoryId" element={<Products 
                                 allProducts={allProducts} 

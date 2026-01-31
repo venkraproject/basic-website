@@ -15,6 +15,7 @@ function DataFetch(dataName, setData ) {
             const fetchedData = Papa.parse(res.data, config).data;
             setData(fetchedData)
             console.log(`${dataName} loaded succesfully`);
+            console.log(fetchedData);
         })
         .catch((err) => {
             console.log(`${dataName} failed to load`);

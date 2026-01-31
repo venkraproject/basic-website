@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import "./desktop-nav.css";
 import LOGO_LIGHT from "../../../assets/logo-blanco.png";
 import LOGO_DARK from "../../../assets/logo-negro.png";
@@ -14,36 +14,62 @@ const PADDING_MIN = 0.5;
 const HEIGHT_DIFF = (LOGO_MAX - LOGO_MIN) + (PADDING_MAX - PADDING_MIN) * 2;
 
 const DesktopNav = () => {
-    const [scrollProgress, setScrollProgress] = useState(0);
+    const location = useLocation();
+    const isHomePage = location.pathname === "/";
+
+    const [scrollProgress, setScrollProgress] = useState(isHomePage ? 1 : 0);
     const [remInPx, setRemInPx] = useState(16);
+
+    useEffect(() => {
+        // Reset scroll progress when route changes
+        setScrollProgress(isHomePage ? 1 : 0);
+    }, [isHomePage]);
 
     useEffect(() => {
         // Get actual rem size in pixels
         setRemInPx(parseFloat(getComputedStyle(document.documentElement).fontSize));
 
         const handleScroll = () => {
-            // maxScroll in pixels = height difference in rem * pixels per rem
-            const maxScroll = HEIGHT_DIFF * remInPx;
-            const progress = Math.min(window.scrollY / maxScroll, 1);
-            setScrollProgress(progress);
+            if (isHomePage) {
+                // On homepage: start compact, stay compact until scroll up
+                const maxScroll = HEIGHT_DIFF * remInPx;
+                // Reverse: progress goes from 1 to 0 as we scroll down, but we want to stay compact
+                // Actually, on homepage we want it always compact, just fade in the background
+                const bgProgress = Math.min(window.scrollY / 100, 1);
+                setScrollProgress(1); // Always compact on homepage
+                // We'll handle bg separately
+                document.documentElement.style.setProperty('--home-bg-opacity', bgProgress);
+            } else {
+                // On other pages: normal shrinking behavior
+                const maxScroll = HEIGHT_DIFF * remInPx;
+                const progress = Math.min(window.scrollY / maxScroll, 1);
+                setScrollProgress(progress);
+            }
         };
 
         window.addEventListener("scroll", handleScroll);
+        handleScroll(); // Call once on mount
         return () => window.removeEventListener("scroll", handleScroll);
-    }, [remInPx]);
+    }, [remInPx, isHomePage]);
 
     // Interpolate values based on scroll progress
     const logoHeight = LOGO_MAX - (scrollProgress * (LOGO_MAX - LOGO_MIN));
     const padding = PADDING_MAX - (scrollProgress * (PADDING_MAX - PADDING_MIN));
-    const isCompact = scrollProgress > 0.5;
+
+    // On homepage: use light logo and light links always
+    // On other pages: transition based on scroll
+    const useLight = isHomePage || scrollProgress > 0.5;
+
+    // Background opacity: on homepage it's controlled separately, on other pages it's scrollProgress
+    const bgOpacity = isHomePage ? 'var(--home-bg-opacity, 0)' : scrollProgress;
 
     return (
         <div
-            className="desktop-nav"
+            className={`desktop-nav ${isHomePage ? 'desktop-nav--homepage' : ''}`}
             style={{
                 "--logo-height": `${logoHeight}rem`,
                 "--nav-padding": `${padding}rem`,
-                "--bg-opacity": scrollProgress,
+                "--bg-opacity": bgOpacity,
             }}
             key="desktop-navbar"
         >
@@ -52,12 +78,12 @@ const DesktopNav = () => {
                     <img
                         src={LOGO_DARK}
                         alt="venkra-logo"
-                        style={{ opacity: 1 - scrollProgress }}
+                        style={{ opacity: isHomePage ? 0 : 1 - scrollProgress }}
                     />
                     <img
                         src={LOGO_LIGHT}
                         alt="venkra-logo"
-                        style={{ opacity: scrollProgress }}
+                        style={{ opacity: isHomePage ? 1 : scrollProgress }}
                     />
                 </Link>
             </div>
@@ -66,14 +92,14 @@ const DesktopNav = () => {
                 <Link
                     className="desktop-nav__link"
                     to="/catalogue"
-                    style={{ color: isCompact ? "var(--color-light)" : "var(--color-dark)" }}
+                    style={{ color: useLight ? "var(--color-light)" : "var(--color-dark)" }}
                 >
                     Catálogo
                 </Link>
                 <Link
                     className="desktop-nav__link"
                     to="/contact"
-                    style={{ color: isCompact ? "var(--color-light)" : "var(--color-dark)" }}
+                    style={{ color: useLight ? "var(--color-light)" : "var(--color-dark)" }}
                 >
                     Contáctanos
                 </Link>

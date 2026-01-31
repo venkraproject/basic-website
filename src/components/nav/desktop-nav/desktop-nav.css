@@ -29,6 +29,20 @@
     z-index: -1;
 }
 
+/* Homepage: transparent background, only show dark overlay on scroll */
+.desktop-nav--homepage {
+    background: transparent;
+}
+
+.desktop-nav--homepage::before {
+    background: var(--color-dark-alt);
+}
+
+.desktop-nav--homepage .desktop-nav__link,
+.desktop-nav--homepage .desktop-nav__logo img {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
+}
+
 .desktop-nav__logo a {
     position: relative;
     display: flex;

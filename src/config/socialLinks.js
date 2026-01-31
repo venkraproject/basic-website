@@ -18,9 +18,9 @@ const socialLinks = {
     title: "Instagram",
   },
   whatsapp: {
-    url: "https://wa.me/message/PLACEHOLDER",
-    contactUrl: "https://wa.me/message/PLACEHOLDER",
-    displayText: "+57 304 60 500 88",
+    url: "https://wa.me/message/QOKZX3EJBF7UD1",
+    contactUrl: "https://wa.me/message/QOKZX3EJBF7UD1",
+    displayText: "+57 304 6050080",
     redirect: "wa",
     title: "WhatsApp",
   },

@@ -106,3 +106,23 @@
     color: var(--color-light) !important;
     background: var(--color-highlight);
 }
+
+.desktop-nav__theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.15s ease, transform 0.2s ease;
+}
+
+.desktop-nav__theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+.desktop-nav--homepage .desktop-nav__theme-toggle {
+    filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.8));
+}

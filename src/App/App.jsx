@@ -12,6 +12,7 @@ import Error from "../pages/Error";
 import ScrollToTop from "../components/ScrollToTop";
 import { DataFetch } from "../data/DataFetching";
 import { useState, useEffect } from "react";
+import { ThemeProvider } from "../context/ThemeContext";
 
 export default function App() {
 
@@ -26,26 +27,28 @@ export default function App() {
     }, [])
 
     return (
-        <HashRouter>
-            <ScrollToTop>
-                <Routes>
-                    <Route path="/" element={<AppUI />}>
-                        <Route index element={<Home categories={categories}/>} />
-                        <Route path="about" element={<About />} />
-                        <Route path="catalogue" element={<Catalogue categories={categories} />}>
-                            <Route index element={<Categories categories={categories}/>} />
-                            <Route path=":categoryId" element={<Products 
-                                allProducts={allProducts} 
-                                categories={categories}/>} />
-                                
-                        <Route path=":categoryId/:productId" element={<SingleProduct allImages={allImages} products={allProducts}/>}/>
+        <ThemeProvider>
+            <HashRouter>
+                <ScrollToTop>
+                    <Routes>
+                        <Route path="/" element={<AppUI />}>
+                            <Route index element={<Home categories={categories}/>} />
+                            <Route path="about" element={<About />} />
+                            <Route path="catalogue" element={<Catalogue categories={categories} />}>
+                                <Route index element={<Categories categories={categories}/>} />
+                                <Route path=":categoryId" element={<Products
+                                    allProducts={allProducts}
+                                    categories={categories}/>} />
+
+                            <Route path=":categoryId/:productId" element={<SingleProduct allImages={allImages} products={allProducts}/>}/>
+                                <Route path="*" element={<Error />} />
+                            </Route>
+                            <Route path="contact" element={<Contact />} />
                             <Route path="*" element={<Error />} />
                         </Route>
-                        <Route path="contact" element={<Contact />} />
-                        <Route path="*" element={<Error />} />
-                    </Route>
-                </Routes>
-            </ScrollToTop>
-        </HashRouter>
+                    </Routes>
+                </ScrollToTop>
+            </HashRouter>
+        </ThemeProvider>
     );
 }

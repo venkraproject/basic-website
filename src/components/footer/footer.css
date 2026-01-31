@@ -6,12 +6,14 @@ footer {
 }
 
 .footer__logo {
-    display: block;
+    display: inline-block;
     margin-bottom: 2rem;
+    color: var(--color-light);
 }
-.footer__logo > img {
+.footer__logo > svg {
     width: 255px;
     height: 135px;
+    display: block;
 }
 
 .permalinks {

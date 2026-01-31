@@ -1,5 +1,5 @@
 import "./footer.css";
-import LOGO from "../../assets/logo.png";
+import Logo from "../../assets/logo.svg?react";
 import { BsFacebook } from "react-icons/bs";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
@@ -11,8 +11,8 @@ const Footer = () => {
     return (
         <footer id="footer">
 
-            <Link  className="footer__logo" to="/">
-                <img src={LOGO} alt="" />
+            <Link className="footer__logo" to="/">
+                <Logo />
             </Link>
 
             <ul className="permalinks">

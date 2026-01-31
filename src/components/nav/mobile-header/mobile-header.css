@@ -10,10 +10,47 @@
     z-index: 10;
 }
 
+.mobile-header__top {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.mobile-header__top a {
+    display: flex;
+    justify-content: center;
+}
+
 .mobile-header img {
     width: 90%;
     max-width: 20rem;
     height: auto;
+}
+
+.mobile-header__actions {
+    position: absolute;
+    right: 0;
+    display: flex;
+    gap: 0.25rem;
+}
+
+.mobile-header__theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+    color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease;
+}
+
+.mobile-header__theme-toggle:hover {
+    transform: scale(1.1);
 }
 
 .mobile-header__page-name {

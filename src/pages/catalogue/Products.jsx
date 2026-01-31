@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 // Components
-import ComingSoon from '../ComingSoon'
 import Error from '../Error'
 import CardGrid from "../../components/cardGrid/CardGrid";
 

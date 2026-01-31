@@ -86,12 +86,13 @@ const SingleProduct = ({ allImages, products }) => {
             )
         } else {
             return(
-                <a 
-                    className="single_product-buy_button" 
+                <button
+                    type="button"
+                    className="single_product-buy_button"
                     onClick={sizeAlert}
                 >
                     Compra ahora
-                </a>
+                </button>
             )
         }
     }

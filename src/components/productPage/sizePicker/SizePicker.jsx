@@ -1,10 +1,6 @@
 import "./sizePicker.css";
 
 const SizePicker = ({ sizes, setCurrentSize, currentSize }) => {
-    function notAvailable(){
-        alert('hola')
-    }
-
     return (
         <div className="single_product-size_picker">
             <h5>Tamaños</h5>

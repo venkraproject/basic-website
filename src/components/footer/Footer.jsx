@@ -31,16 +31,16 @@ const Footer = () => {
             </ul>
 
             <div className="footer__socials">
-                <a href={socialLinks.facebook} target="_blank" rel="noreferrer">
+                <a href={socialLinks.facebook.url} target="_blank" rel="noreferrer">
                     <BsFacebook />
                 </a>
-                <a href={socialLinks.instagram} target="_blank" rel="noreferrer">
+                <a href={socialLinks.instagram.url} target="_blank" rel="noreferrer">
                     <BsInstagram />
                 </a>
-                <a href={socialLinks.messenger} target="_blank" rel="noreferrer">
+                <a href={socialLinks.messenger.url} target="_blank" rel="noreferrer">
                     <BsMessenger />
                 </a>
-                <a href={socialLinks.whatsapp} target="_blank" rel="noreferrer">
+                <a href={socialLinks.whatsapp.url} target="_blank" rel="noreferrer">
                     <BsWhatsapp />
                 </a>
             </div>

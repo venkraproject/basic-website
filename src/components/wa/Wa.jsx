@@ -5,7 +5,7 @@ import socialLinks from '../../config/socialLinks'
 const Wa = () => {
   return (
     <div className='WA__section' key="wa">
-      <a className='whatsapp-icon' href={socialLinks.whatsapp} target='_blank' rel='noreferrer'><BsWhatsapp/></a>
+      <a className='whatsapp-icon' href={socialLinks.whatsapp.url} target='_blank' rel='noreferrer'><BsWhatsapp/></a>
     </div>
   )
 }

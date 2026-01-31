@@ -1,5 +1,4 @@
 import socialLinks from '../src/config/socialLinks.js'
-import redirects from '../src/config/redirects.js'
 
 function generateRedirectHtml(url, title, base) {
   return `<!DOCTYPE html>
@@ -76,13 +75,12 @@ export default function socialRedirectsPlugin(base = '/') {
   return {
     name: 'social-redirects',
     generateBundle() {
-      for (const [filename, config] of Object.entries(redirects)) {
-        const url = socialLinks[config.key]
-        if (url) {
+      for (const [key, config] of Object.entries(socialLinks)) {
+        if (config.redirect) {
           this.emitFile({
             type: 'asset',
-            fileName: `${filename}.html`,
-            source: generateRedirectHtml(url, config.title, base),
+            fileName: `${config.redirect}.html`,
+            source: generateRedirectHtml(config.url, config.title, base),
           })
         }
       }

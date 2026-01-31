@@ -11,21 +11,7 @@ import SizePicker from "../../components/productPage/sizePicker/SizePicker";
 const SingleProduct = ({ allImages, products }) => {
     const { productId } = useParams();
 
-    // Set state for color and size
-    const [ product, setProduct ] = useState({
-        id:"temp_id",
-        name:"Loading",
-        category:"loading",
-        price:65000,
-        description: "Loading",
-        short_description:"$65.000",
-        img_url:"https://i.postimg.cc/dV8jXLM6/c-t-shirt-P.jpg",
-        xl:5,
-        l:5,
-        m:5,
-        s:1,
-        tallas:"{xl:5,xl:10,m:10,s:5}"
-    })
+    const [ product, setProduct ] = useState(null)
     const [ allColors, setAllColors ] = useState([])
     const [ currentColor, setCurrentColor ] = useState();
     const [ currentSize, setCurrentSize ] = useState({});
@@ -33,8 +19,12 @@ const SingleProduct = ({ allImages, products }) => {
 
     useEffect(() => {
         if(products.length) {
-            setProduct(products.find((product) => product.id === productId))
+            setProduct(products.find((p) => p.id === productId))
         }
+    }, [productId, products])
+
+    useEffect(() => {
+        if (!product) return
 
         const productImages = allImages.filter(
             (image) => image.referencia === product.id
@@ -52,8 +42,8 @@ const SingleProduct = ({ allImages, products }) => {
         if(!currentColor){
             setCurrentColor(colors[0])
         }
-        
-    }, [product, productId, products, allImages, currentColor])
+
+    }, [product, allImages, currentColor])
     
     const sizes = [
         { id: "s", name: "S", amount: product.s },
@@ -63,7 +53,7 @@ const SingleProduct = ({ allImages, products }) => {
     ];
 
     const buyLink =
-        `https://wa.me/${socialLinks.whatsappPhone}?text=Hola%2C%20estoy%20interesado%20en%20` +
+        `https://wa.me/${socialLinks.whatsapp.url}?text=Hola%2C%20estoy%20interesado%20en%20` +
         product.name +
         " (" +
         product.id +
@@ -100,6 +90,14 @@ const SingleProduct = ({ allImages, products }) => {
 
     function sizeAlert(){
         alert('Porfavor selecciona tu talla')
+    }
+
+    if (!product) {
+        return (
+            <section className="section__product" key="singleProduct">
+                <p>Cargando...</p>
+            </section>
+        )
     }
 
     return (

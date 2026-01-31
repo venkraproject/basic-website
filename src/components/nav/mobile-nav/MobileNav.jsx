@@ -20,7 +20,7 @@ const MobileNav = () => {
             </Link>
             <a
                 className="wa-link"
-                href={socialLinks.whatsapp}
+                href={socialLinks.whatsapp.url}
                 target="_blank"
                 rel="noreferrer"
             >

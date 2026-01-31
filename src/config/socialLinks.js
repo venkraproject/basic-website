@@ -20,7 +20,7 @@ const socialLinks = {
   whatsapp: {
     url: "https://wa.me/message/PLACEHOLDER",
     contactUrl: "https://wa.me/message/PLACEHOLDER",
-    displayText: "+57 304 60 500 88",
+    displayText: "+57 304 60 500 80",
     redirect: "wa",
     title: "WhatsApp",
   },

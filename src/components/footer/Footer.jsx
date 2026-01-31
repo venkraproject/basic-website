@@ -47,7 +47,6 @@ const Footer = () => {
             <div className="footer__copyright">
                 <small>
                     <a href="https://profile.juanrcifuentes.com" target="_blank" rel="noreferrer">@juanrcifuentes</a>{" "}
-                    <a href="https://github.com/Ncano27" target="_blank" rel="noreferrer">@ncano27</a>{" "}
                     All rights reserved
                 </small>
             </div>

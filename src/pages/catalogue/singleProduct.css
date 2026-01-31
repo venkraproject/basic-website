@@ -25,8 +25,13 @@
 
 .single_product-buy_button {
     display: block;
+    width: 100%;
     text-align: center;
     background: var(--color-highlight);
+    border: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
 }
 
 .single_product-buy_price {

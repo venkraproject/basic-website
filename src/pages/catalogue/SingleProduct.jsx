@@ -44,7 +44,15 @@ const SingleProduct = ({ allImages, products }) => {
         }
 
     }, [product, allImages, currentColor])
-    
+
+    if (!product) {
+        return (
+            <section className="section__product" key="singleProduct">
+                <p>Cargando...</p>
+            </section>
+        )
+    }
+
     const sizes = [
         { id: "s", name: "S", amount: product.s },
         { id: "m", name: "M", amount: product.m },
@@ -90,14 +98,6 @@ const SingleProduct = ({ allImages, products }) => {
 
     function sizeAlert(){
         alert('Porfavor selecciona tu talla')
-    }
-
-    if (!product) {
-        return (
-            <section className="section__product" key="singleProduct">
-                <p>Cargando...</p>
-            </section>
-        )
     }
 
     return (

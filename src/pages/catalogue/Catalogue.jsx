@@ -32,9 +32,9 @@ const CatalogueLayout = () => {
                             Gorras
                     </div>
                         </Link>
-                        <Link to="/catalogue/busos_y_hoodies">
+                        <Link to="/catalogue/busos_y_hoodie">
                     <div className={busos}>
-                            Busos y Hoodies
+                            Busos y Hoodie
                     </div>
                         </Link>
                 </div>

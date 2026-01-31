@@ -1,5 +1,6 @@
 .mobile-header {
     display: none;
+    flex-direction: column;
     background: var(--color-highlight);
     padding: 0.5rem 1rem;
     justify-content: center;
@@ -13,6 +14,13 @@
     width: 90%;
     max-width: 20rem;
     height: auto;
+}
+
+.mobile-header__page-name {
+    color: var(--color-dark);
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
 }
 
 /* Only show on mobile */

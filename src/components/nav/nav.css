@@ -13,7 +13,7 @@
     }
     .desktop-nav-spacer {
         display: block;
-        height: 8rem;
+        height: 182px; /* Matches expanded nav height */
     }
 }
 

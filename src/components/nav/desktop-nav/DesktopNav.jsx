@@ -13,9 +13,17 @@ const PADDING_MIN = 0.5;
 // Total height change (logo + top padding + bottom padding)
 const HEIGHT_DIFF = (LOGO_MAX - LOGO_MIN) + (PADDING_MAX - PADDING_MIN) * 2;
 
+const pageNames = {
+    '/catalogue': 'Catálogo',
+    '/contact': 'Contáctanos',
+    '/about': 'Nosotros',
+};
+
 const DesktopNav = () => {
     const location = useLocation();
     const isHomePage = location.pathname === "/";
+    const basePath = '/' + location.pathname.split('/')[1];
+    const pageName = pageNames[basePath];
 
     const [scrollProgress, setScrollProgress] = useState(isHomePage ? 1 : 0);
     const [remInPx, setRemInPx] = useState(16);
@@ -55,6 +63,7 @@ const DesktopNav = () => {
     // Interpolate values based on scroll progress
     const logoHeight = LOGO_MAX - (scrollProgress * (LOGO_MAX - LOGO_MIN));
     const padding = PADDING_MAX - (scrollProgress * (PADDING_MAX - PADDING_MIN));
+    const pageNameSize = 1.1 - (scrollProgress * 0.35); // 1.1rem -> 0.75rem
 
     // On homepage: use light logo and light links always
     // On other pages: transition based on scroll
@@ -70,22 +79,31 @@ const DesktopNav = () => {
                 "--logo-height": `${logoHeight}rem`,
                 "--nav-padding": `${padding}rem`,
                 "--bg-opacity": bgOpacity,
+                "--page-name-size": `${pageNameSize}rem`,
             }}
             key="desktop-navbar"
         >
-            <div className="desktop-nav__logo">
-                <Link to="/">
-                    <img
-                        src={LOGO_DARK}
-                        alt="venkra-logo"
-                        style={{ opacity: isHomePage ? 0 : 1 - scrollProgress }}
-                    />
-                    <img
-                        src={LOGO_LIGHT}
-                        alt="venkra-logo"
-                        style={{ opacity: isHomePage ? 1 : scrollProgress }}
-                    />
-                </Link>
+            <div className="desktop-nav__left">
+                <div className="desktop-nav__logo">
+                    <Link to="/">
+                        <img
+                            src={LOGO_DARK}
+                            alt="venkra-logo"
+                            style={{ opacity: isHomePage ? 0 : 1 - scrollProgress }}
+                        />
+                        <img
+                            src={LOGO_LIGHT}
+                            alt="venkra-logo"
+                            style={{ opacity: isHomePage ? 1 : scrollProgress }}
+                        />
+                    </Link>
+                </div>
+                {pageName && !isHomePage && (
+                    <div className="desktop-nav__page-name">
+                        <span style={{ opacity: 1 - scrollProgress }}>{pageName}</span>
+                        <span style={{ opacity: scrollProgress }}>{pageName}</span>
+                    </div>
+                )}
             </div>
 
             <div className="desktop-nav__links">

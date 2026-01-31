@@ -5,19 +5,22 @@
 const socialLinks = {
   facebook: {
     url: "https://www.facebook.com/Venkra.co/",
+    contactUrl: "https://m.me/Venkra.co",
+    displayText: "venkra.com/fb",
     redirect: "fb",
     title: "Facebook",
   },
   instagram: {
     url: "https://www.instagram.com/venkra.co/",
+    contactUrl: "https://www.instagram.com/venkra.co/",
+    displayText: "@venkra.co",
     redirect: "ig",
     title: "Instagram",
   },
-  messenger: {
-    url: "https://m.me/Venkra.co",
-  },
   whatsapp: {
     url: "https://wa.me/message/PLACEHOLDER",
+    contactUrl: "https://wa.me/message/PLACEHOLDER",
+    displayText: "+57 304 60 500 88",
     redirect: "wa",
     title: "WhatsApp",
   },

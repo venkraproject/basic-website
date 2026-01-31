@@ -37,7 +37,7 @@ const Footer = () => {
                 <a href={socialLinks.instagram.url} target="_blank" rel="noreferrer">
                     <BsInstagram />
                 </a>
-                <a href={socialLinks.messenger.url} target="_blank" rel="noreferrer">
+                <a href={socialLinks.facebook.contactUrl} target="_blank" rel="noreferrer">
                     <BsMessenger />
                 </a>
                 <a href={socialLinks.whatsapp.url} target="_blank" rel="noreferrer">

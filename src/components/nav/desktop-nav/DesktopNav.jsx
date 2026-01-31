@@ -7,7 +7,7 @@ import LOGO_DARK from "../../../assets/logo-negro.png";
 // Height values in rem
 const LOGO_MAX = 5;
 const LOGO_MIN = 2;
-const PADDING_MAX = 1.5;
+const PADDING_MAX = 0.5;
 const PADDING_MIN = 0.5;
 
 // Total height change (logo + top padding + bottom padding)

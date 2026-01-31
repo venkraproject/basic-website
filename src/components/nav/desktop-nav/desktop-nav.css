@@ -54,6 +54,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    padding-top: 1rem;
 }
 
 .desktop-nav__page-name {

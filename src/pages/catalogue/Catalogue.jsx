@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { Link, Outlet, useParams } from "react-router-dom";
 import "./catalogue.css";
-import Header from "../../components/header/Header";
 
 const CatalogueLayout = ({ categories }) => {
     const { categoryId } = useParams();
@@ -11,7 +10,6 @@ const CatalogueLayout = ({ categories }) => {
 
     return (
         <div className="catalogue__container" key="shared-catalohue">
-            <Header sectionTitle="CATALOGO"/>
             <div className="catalogue__links-container">
                 {/* Hamburger button - mobile only */}
                 <button

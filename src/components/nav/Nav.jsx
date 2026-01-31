@@ -4,10 +4,14 @@ import './nav.css'
 
 const Nav = () => {
     return (
-        <nav key="navbar">
-            <MobileNav className='mobile-nav'/>
-            <DesktopNav className='desktop-nav'/>
-        </nav>
+        <>
+            <nav key="navbar">
+                <MobileNav className='mobile-nav'/>
+                <DesktopNav className='desktop-nav'/>
+            </nav>
+            {/* Spacer for fixed desktop nav - height matches expanded state */}
+            <div className="desktop-nav-spacer" />
+        </>
     );
 };
 

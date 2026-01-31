@@ -1,33 +1,65 @@
-a > img {
-    height: 1.5rem;
-}
-
-/* DESKTOP VERSION */
-
 .desktop-nav {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    z-index: 3;
+    --logo-height: 5rem;
+    --nav-padding: 1.5rem;
+    --bg-opacity: 0;
+
     position: fixed;
-    background: transparent;
-    width: 100%;
-    height: 2.6rem;
-    padding: 0.5rem;
-    left: 0;
     top: 0;
-    transition: var(--transition);
-}
-
-.desktop-nav.active {
-    background: var(--color-dark-alt);
-}
-
-.desktop-nav > .right > .section-link:hover {
-    color: var(--color-light);
-    padding: 1rem 3rem;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--nav-padding) 1rem;
     background: var(--color-highlight);
 }
 
-.right {
-    justify-self: end;
+/* Dark background overlay that fades in on scroll */
+.desktop-nav::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--color-dark-alt);
+    opacity: var(--bg-opacity);
+    z-index: -1;
+}
+
+.desktop-nav__logo a {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.desktop-nav__logo img {
+    height: var(--logo-height);
+    width: auto;
+}
+
+.desktop-nav__logo img:last-child {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Links styling */
+.desktop-nav__links {
+    display: flex;
+    gap: 1rem;
+}
+
+.desktop-nav__link {
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.15s ease, background 0.2s ease;
+}
+
+.desktop-nav__link:hover {
+    color: var(--color-light) !important;
+    background: var(--color-highlight);
 }

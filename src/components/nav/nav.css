@@ -1,19 +1,32 @@
-/* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
+/* Spacer to push content below fixed nav */
+.desktop-nav-spacer {
+    display: none;
+}
+
+/* ======== MEDIA QUERIES (DESKTOP) ============ */
 @media screen and (min-width: 670px) {
     .mobile-nav {
         display: none;
     }
     .desktop-nav {
-        display: grid;
+        display: flex;
+    }
+    .desktop-nav-spacer {
+        display: block;
+        /* 5rem logo + 1.5rem padding top + 1.5rem padding bottom = 8rem */
+        height: 8rem;
     }
 }
 
-/* ======== MEDIA QUERIES (SMALL DEVICES) ============ */
+/* ======== MEDIA QUERIES (MOBILE) ============ */
 @media screen and (max-width: 670px) {
     .mobile-nav {
         display: flex;
     }
     .desktop-nav {
+        display: none;
+    }
+    .desktop-nav-spacer {
         display: none;
     }
 }

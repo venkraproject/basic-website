@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import "./singleProduct.css";
+import socialLinks from "../../config/socialLinks";
 
 // Components
 import SingleProductSwiper from "../../components/productPage/productSwiper/ProductSwiper";
@@ -62,7 +63,7 @@ const SingleProduct = ({ allImages, products }) => {
     ];
 
     const buyLink =
-        "https://wa.me/+573044644001?text=Hola%2C%20estoy%20interesado%20en%20" +
+        `https://wa.me/${socialLinks.whatsappPhone}?text=Hola%2C%20estoy%20interesado%20en%20` +
         product.name +
         " (" +
         product.id +

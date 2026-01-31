@@ -5,6 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsMessenger } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import socialLinks from "../../config/socialLinks";
 
 const Footer = () => {
     return (
@@ -30,16 +31,16 @@ const Footer = () => {
             </ul>
 
             <div className="footer__socials">
-                <a href="https://www.facebook.com/Venkra.co/" target="_blank" rel="noreferrer">
+                <a href={socialLinks.facebook} target="_blank" rel="noreferrer">
                     <BsFacebook />
                 </a>
-                <a href="https://www.instagram.com/venkra.co/" target="_blank" rel="noreferrer">
+                <a href={socialLinks.instagram} target="_blank" rel="noreferrer">
                     <BsInstagram />
                 </a>
-                <a href="https://m.me/Venkra.co" target="_blank" rel="noreferrer">
+                <a href={socialLinks.messenger} target="_blank" rel="noreferrer">
                     <BsMessenger />
                 </a>
-                <a href="https://wa.me/message/DHRR36X34O6ZC1" target="_blank" rel="noreferrer">
+                <a href={socialLinks.whatsapp} target="_blank" rel="noreferrer">
                     <BsWhatsapp />
                 </a>
             </div>

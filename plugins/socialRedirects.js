@@ -1,0 +1,91 @@
+import socialLinks from '../src/config/socialLinks.js'
+import redirects from '../src/config/redirects.js'
+
+function generateRedirectHtml(url, title, base) {
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="1; url=${url}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VENKRA - ${title}</title>
+  <link rel="canonical" href="${url}">
+  <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Gothic A1', sans-serif;
+      background: #2b2b2b;
+      color: #EFEBE6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+    .logo {
+      width: 120px;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      font-weight: 300;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: #cac6c1;
+      font-size: 0.9rem;
+    }
+    a {
+      color: hsl(40, 18%, 52%);
+      text-decoration: none;
+    }
+    a:hover {
+      color: #EFEBE6;
+    }
+    .spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid #4f4e4e;
+      border-top-color: hsl(40, 18%, 52%);
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+      margin-bottom: 2rem;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <img src="${base}assets/logo.png" alt="Venkra" class="logo" onerror="this.style.display='none'">
+  <div class="spinner"></div>
+  <h1>Redirigiendo a ${title}...</h1>
+  <p>Si no eres redirigido, <a href="${url}">haz clic aquí</a></p>
+</body>
+</html>`
+}
+
+export default function socialRedirectsPlugin(base = '/') {
+  return {
+    name: 'social-redirects',
+    generateBundle() {
+      for (const [filename, config] of Object.entries(redirects)) {
+        const url = socialLinks[config.key]
+        if (url) {
+          this.emitFile({
+            type: 'asset',
+            fileName: `${filename}.html`,
+            source: generateRedirectHtml(url, config.title, base),
+          })
+        }
+      }
+    },
+  }
+}

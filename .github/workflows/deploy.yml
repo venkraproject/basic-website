@@ -26,10 +26,11 @@ jobs:
         run: bun run build
 
       - name: Create CNAME
-        run: echo "https://juanrcifuentes.github.io/venkra--basic-website/" > ./build/CNAME
+        if: vars.CUSTOM_DOMAIN
+        run: echo "${{ vars.CUSTOM_DOMAIN }}" > ./dist/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+          publish_dir: ./dist

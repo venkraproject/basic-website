@@ -1,0 +1,41 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build
+        run: |
+          echo "CUSTOM_DOMAIN: ${{ vars.CUSTOM_DOMAIN }}"
+          echo "VITE_BASE: $VITE_BASE"
+          bun run build
+        env:
+          VITE_BASE: ${{ vars.CUSTOM_DOMAIN && '/' || format('/{0}/', github.event.repository.name) }}
+
+      - name: Create CNAME
+        if: vars.CUSTOM_DOMAIN
+        run: echo "${{ vars.CUSTOM_DOMAIN }}" > ./dist/CNAME
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist

@@ -1,10 +1,11 @@
 import './wa.css'
 import {BsWhatsapp} from 'react-icons/bs'
+import socialLinks from '../../config/socialLinks'
 
 const Wa = () => {
   return (
     <div className='WA__section' key="wa">
-      <a className='whatsapp-icon' href="https://wa.me/message/QOKZX3EJBF7UD1" target='_blank' rel='noreferrer'><BsWhatsapp/></a>
+      <a className='whatsapp-icon' href={socialLinks.whatsapp.url} target='_blank' rel='noreferrer'><BsWhatsapp/></a>
     </div>
   )
 }

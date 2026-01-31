@@ -4,6 +4,7 @@ import { BiPhotoAlbum } from "react-icons/bi";
 import { IoIosContact } from "react-icons/io";
 import { BsWhatsapp } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import socialLinks from "../../../config/socialLinks";
 
 const MobileNav = () => {
     return (
@@ -19,7 +20,7 @@ const MobileNav = () => {
             </Link>
             <a
                 className="wa-link"
-                href="https://wa.me/message/DHRR36X34O6ZC1"
+                href={socialLinks.whatsapp.url}
                 target="_blank"
                 rel="noreferrer"
             >

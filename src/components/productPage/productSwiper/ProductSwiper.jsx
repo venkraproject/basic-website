@@ -1,11 +1,10 @@
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Lazy, Pagination, Navigation } from "swiper";
+import { Pagination, Navigation } from "swiper/modules";
 import './productSwiper.css'
 
 // Import Swiper styles
 import "swiper/css";
-import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
@@ -16,13 +15,12 @@ const SingleProductSwiper = ({ shownImages }) => {
                 "--swiper-navigation-color": "#fff",
                 "--swiper-pagination-color": "#fff",
             }}
-            lazy={true}
             spaceBetween={30}
             navigation={true}
             pagination={{
                 dynamicBullets: true,
             }}
-            modules={[Lazy, Pagination, Navigation]}
+            modules={[Pagination, Navigation]}
             className="swiper"
         >
             {shownImages.map((image) => {
@@ -31,6 +29,7 @@ const SingleProductSwiper = ({ shownImages }) => {
                         <img
                             src={image.img_url}
                             alt={image.referencia + image.file_id}
+                            loading="lazy"
                         />
                     </SwiperSlide>
                 );

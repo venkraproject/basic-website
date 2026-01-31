@@ -5,6 +5,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { BsMessenger } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import socialLinks from "../../config/socialLinks";
 
 const Footer = () => {
     return (
@@ -30,16 +31,16 @@ const Footer = () => {
             </ul>
 
             <div className="footer__socials">
-                <a href="https://www.facebook.com/Venkra.co/" target="_blank" rel="noreferrer">
+                <a href={socialLinks.facebook.url} target="_blank" rel="noreferrer">
                     <BsFacebook />
                 </a>
-                <a href="https://www.instagram.com/venkra.co/" target="_blank" rel="noreferrer">
+                <a href={socialLinks.instagram.url} target="_blank" rel="noreferrer">
                     <BsInstagram />
                 </a>
-                <a href="https://m.me/Venkra.co" target="_blank" rel="noreferrer">
+                <a href={socialLinks.facebook.contactUrl} target="_blank" rel="noreferrer">
                     <BsMessenger />
                 </a>
-                <a href="https://wa.me/message/DHRR36X34O6ZC1" target="_blank" rel="noreferrer">
+                <a href={socialLinks.whatsapp.url} target="_blank" rel="noreferrer">
                     <BsWhatsapp />
                 </a>
             </div>
@@ -47,7 +48,6 @@ const Footer = () => {
             <div className="footer__copyright">
                 <small>
                     <a href="https://profile.juanrcifuentes.com" target="_blank" rel="noreferrer">@juanrcifuentes</a>{" "}
-                    <a href="https://github.com/Ncano27" target="_blank" rel="noreferrer">@ncano27</a>{" "}
                     All rights reserved
                 </small>
             </div>

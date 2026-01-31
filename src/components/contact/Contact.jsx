@@ -1,6 +1,7 @@
 import './contact.css'
 import {BsMessenger} from 'react-icons/bs'
 import {BsWhatsapp} from 'react-icons/bs'
+import socialLinks from '../../config/socialLinks'
 
 const Contact = () => {
   return (
@@ -12,14 +13,14 @@ const Contact = () => {
         <article className="contact__option">
           <BsMessenger className='contact__option-icon' />
           <h4>Messenger</h4>
-          <h5>venkra.com/fb</h5>
-          <a href="https://m.me/Venkra.co" target='_blank' rel='noreferrer'>Escríbenos</a>
+          <h5>{socialLinks.facebook.displayText}</h5>
+          <a href={socialLinks.facebook.contactUrl} target='_blank' rel='noreferrer'>Escríbenos</a>
         </article>
         <article className="contact__option">
           <BsWhatsapp className='contact__option-icon' />
           <h4>WhatsApp</h4>
-          <h5>+57 304 60 500 80</h5>
-          <a href="https://wa.me/message/QOKZX3EJBF7UD1" target='_blank' rel='noreferrer'>Escríbenos</a>
+          <h5>{socialLinks.whatsapp.displayText}</h5>
+          <a href={socialLinks.whatsapp.url} target='_blank' rel='noreferrer'>Escríbenos</a>
         </article>
       </div>
       {/* <form action="">

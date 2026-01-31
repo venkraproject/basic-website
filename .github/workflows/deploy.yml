@@ -24,6 +24,8 @@ jobs:
 
       - name: Build
         run: bun run build
+        env:
+          VITE_BASE: ${{ vars.CUSTOM_DOMAIN && '/' || format('/{0}/', github.event.repository.name) }}
 
       - name: Create CNAME
         if: vars.CUSTOM_DOMAIN

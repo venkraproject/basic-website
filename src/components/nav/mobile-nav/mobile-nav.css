@@ -28,6 +28,10 @@
     align-items: center;
 }
 
+.mobile-nav > .logo-link img {
+    height: 1.5rem;
+}
+
 .mobile-nav > .section-link {
     color: var(--color-light);
     display: flex;

@@ -1,4 +1,4 @@
-/* Spacer to push content below fixed nav */
+/* Spacer to push content below fixed nav - desktop only, not on homepage */
 .desktop-nav-spacer {
     display: none;
 }
@@ -6,27 +6,26 @@
 /* ======== MEDIA QUERIES (DESKTOP) ============ */
 @media screen and (min-width: 670px) {
     .mobile-nav {
-        display: none;
+        display: none !important;
     }
     .desktop-nav {
-        display: flex;
+        display: flex !important;
     }
     .desktop-nav-spacer {
         display: block;
-        /* 5rem logo + 1.5rem padding top + 1.5rem padding bottom = 8rem */
         height: 8rem;
     }
 }
 
 /* ======== MEDIA QUERIES (MOBILE) ============ */
-@media screen and (max-width: 670px) {
+@media screen and (max-width: 669px) {
     .mobile-nav {
-        display: flex;
+        display: flex !important;
     }
     .desktop-nav {
-        display: none;
+        display: none !important;
     }
     .desktop-nav-spacer {
-        display: none;
+        display: none !important;
     }
 }

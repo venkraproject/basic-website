@@ -18,7 +18,7 @@ const CatalogueLayout = ({ categories }) => {
                 >
                     <span className={`catalogue__hamburger-icon ${menuOpen ? 'open' : ''}`}></span>
                     <span className="catalogue__hamburger-label">
-                        {selectedCategory?.name || 'Categorías'}
+                        Categorías{selectedCategory ? ` - ${selectedCategory.name}` : ''}
                     </span>
                 </button>
 

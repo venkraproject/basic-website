@@ -1,0 +1,23 @@
+.mobile-header {
+    display: none;
+    background: var(--color-highlight);
+    padding: 0.5rem 1rem;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.mobile-header img {
+    width: 90%;
+    max-width: 20rem;
+    height: auto;
+}
+
+/* Only show on mobile */
+@media screen and (max-width: 669px) {
+    .mobile-header {
+        display: flex;
+    }
+}

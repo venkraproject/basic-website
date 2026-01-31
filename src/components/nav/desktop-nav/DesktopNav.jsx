@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { IoSunnyOutline, IoMoonOutline, IoColorPaletteOutline } from "react-icons/io5";
+import { useTheme } from "../../../context/ThemeContext";
+import ThemePanel from "../../theme-panel/ThemePanel";
 import "./desktop-nav.css";
 import LOGO_LIGHT from "../../../assets/logo-blanco.png";
 import LOGO_DARK from "../../../assets/logo-negro.png";
@@ -21,12 +24,14 @@ const pageNames = {
 
 const DesktopNav = () => {
     const location = useLocation();
+    const { theme, toggleTheme } = useTheme();
     const isHomePage = location.pathname === "/";
     const basePath = '/' + location.pathname.split('/')[1];
     const pageName = pageNames[basePath];
 
     const [scrollProgress, setScrollProgress] = useState(isHomePage ? 1 : 0);
     const [remInPx, setRemInPx] = useState(16);
+    const [isPanelOpen, setIsPanelOpen] = useState(false);
 
     useEffect(() => {
         // Reset scroll progress when route changes
@@ -121,7 +126,24 @@ const DesktopNav = () => {
                 >
                     Contáctanos
                 </Link>
+                <button
+                    className="desktop-nav__theme-toggle"
+                    onClick={toggleTheme}
+                    aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+                    style={{ color: useLight ? "var(--color-light)" : "var(--color-dark)" }}
+                >
+                    {theme === 'dark' ? <IoSunnyOutline /> : <IoMoonOutline />}
+                </button>
+                <button
+                    className="desktop-nav__theme-toggle"
+                    onClick={() => setIsPanelOpen(true)}
+                    aria-label="Customize colors"
+                    style={{ color: useLight ? "var(--color-light)" : "var(--color-dark)" }}
+                >
+                    <IoColorPaletteOutline />
+                </button>
             </div>
+            <ThemePanel isOpen={isPanelOpen} onClose={() => setIsPanelOpen(false)} />
         </div>
     );
 };

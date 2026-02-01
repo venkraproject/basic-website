@@ -15,7 +15,7 @@ export const defaultColors = {
         darkAlt: '#324e41',
         light: '#143425',
         lightAlt: '#324e41',
-        highlight: '#EFEBE6',
+        highlight: '#919D94',
         highlightAlt: '#324e41',
     },
 };

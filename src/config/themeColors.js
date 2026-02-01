@@ -5,7 +5,7 @@ export const defaultColors = {
     dark: {
         dark: '#143425',
         darkAlt: '#324e41',
-        light: '#EFEBE6',
+        light: '#ffffff',
         lightAlt: '#cac6c1',
         highlight: '#E2D9C5',
         highlightAlt: '#324e41',

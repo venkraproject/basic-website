@@ -8,7 +8,7 @@ export const defaultColors = {
         light: '#EFEBE6',
         lightAlt: '#cac6c1',
         highlight: '#EFEBE6',
-        highlightAlt: '#324E41',
+        highlightAlt: '#E2D9C5',
     },
     light: {
         dark: '#EFEBE6',

@@ -61,7 +61,7 @@ const SingleProduct = ({ allImages, products }) => {
     ];
 
     const buyLink =
-        `https://wa.me/message/QOKZX3EJBF7UD1${socialLinks.whatsapp.url}?text=Hola%2C%20estoy%20interesado%20en%20` +
+        `https://wa.me${socialLinks.whatsapp.url}?text=Hola%2C%20estoy%20interesado%20en%20` +
         product.name +
         " (" +
         product.id +
